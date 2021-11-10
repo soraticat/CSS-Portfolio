@@ -1,0 +1,174 @@
+:root {
+	--teal: #92cccd;
+	--charcoal: #31343d;
+}
+
+header {
+	display: flex;
+
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--charcoal);
+}
+
+h1 {
+	background-color: var(--teal);
+	font-size: 3.5rem;
+
+	/* padding: 20px, 20px 0 0; */
+}
+
+nav {
+	display: flex;
+	justify-content: end;
+}
+
+nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	/* padding-right: 20px; */
+}
+
+nav ul li {
+	color: var(--teal);
+	list-style: none;
+	padding: 0;
+	display: inline-flex;
+	border-bottom: 3px;
+	border-bottom-style: solid;
+	padding: 10px 10px 3px 3px;
+	margin-right: 10px;
+	font-size: 1.5rem;
+	justify-content: end;
+	align-items: center;
+}
+
+body {
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+section.subheader {
+	display: flex;
+	background-image: url('../images/background-banner-image-cropped.png');
+	background-size: cover;
+	background-position: center;
+	padding: 2%;
+	justify-content: flex-end;
+	/* justify-content: space-between; */
+}
+
+h2 {
+	display: inline;
+	position: relative;
+	background-color: var(--teal);
+	font-size: 1.5rem;
+	text-align: right;
+	/* margin-top: -50px; */
+	/*padding-right: 50px; */
+}
+
+#banner {
+	display: inline-block;
+	width: 100%;
+}
+
+main {
+	display: flex;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: auto;
+	grid-template-areas:
+		'about'
+		'work'
+		'footer';
+}
+
+/* Creates grid for About Me subsection */
+.about {
+	display: inline-flex;
+	flex-direction: row;
+	/* flex-wrap: wrap;
+	align-items: stretch; */
+	/* justify-self: start;
+	grid-area: about;
+	display: grid; */
+	/* display: flex; */
+	/* grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		'aboutLabel p1 p1'
+		'aboutLabel p2 p2'; */
+}
+
+h3 {
+	/* display: flex; */
+	border-right: 5px;
+	border-right-style: solid;
+	padding-right: 30px;
+	padding-left: 100px;
+	margin-right: 20px;
+	text-align: end;
+
+	/* justify-content: flex-start; */
+	/* flex-direction: column; */
+}
+
+.p1 {
+	/* flex-direction: column; */
+	/* grid-area: p1; */
+	/* grid-column: span 2; */
+}
+
+.p2 {
+	/* grid-area: p2; */
+	/* grid-column: span 2; */
+}
+
+/* Creates a grid for the work subsection. */
+.work {
+	display: flex;
+	/* justify-self: start;
+	grid-area: work;
+	display: grid;
+	/* display: flex; */
+	/* grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		'workLabel workImg1 workImg1'
+		'workLabel workImg2 workImg3'
+		'workLabel workImg4 workImg5'; */
+}
+
+.workLabel {
+	grid-area: workLabel;
+	text-align: end;
+}
+
+.workImg1 {
+	grid-column: span 2;
+	justify-self: center;
+}
+
+/* Creates grid for Contact Me subsection */
+footer.footer {
+	display: flex;
+	/* grid-area: footer;
+	display: grid;
+	display: inline-flex;
+	grid-template-columns: 50px repeat(7, 1fr);
+	grid-template-rows: 1fr;
+	grid-template-areas: 'contactLabel contactInfo contactInfo contactInfo contactInfo contactInfo .'; */
+}
+
+.contactLabel {
+	grid-area: contactLabel;
+}
+
+.contactInfo {
+	grid-area: contactInfo;
+}
